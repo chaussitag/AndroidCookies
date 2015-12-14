@@ -1,0 +1,52 @@
+demonstrating how to use 'junit' and 'mockito' frameworks to make local unit tests.
+
+local unit tests are suitable for testing code that has no dependencies or only has simple dependencies on Android;
+local unit tests run on a local JVM on your development machine, rather than a device or emulator;
+use a mocking framework like Mockito to fulfill the simple dependencies on Android;
+
+most of code in this folder is copied from:
+ https://github.com/googlesamples/android-testing/tree/master/unit/BasicSample,
+
+===================================================================================================
+Local tests:
+  Unit tests that run on your local machine only. These tests are compiled to run locally on the
+Java Virtual Machine (JVM) to minimize execution time. Use this approach to run unit tests that
+have no dependencies on the Android framework or have dependencies that can be filled by using mock objects.
+===================================================================================================
+
+===================================================================================================
+"""
+If your unit test has no dependencies or only has simple dependencies on Android,
+you should run your test on a local development machine. This testing approach is efficient because
+it helps you avoid the overhead of loading the target app and unit test code onto a physical device
+or emulator every time your test is run. Consequently, the execution time for running your unit test
+is greatly reduced. With this approach, you normally use a mocking framework, like Mockito,
+to fulfill any dependency relationships.
+"""
+
+"""
+Unit tests run on a local JVM on your development machine. Our gradle plugin will compile
+source code found in src/test/java and execute it using the usual Gradle testing mechanisms.
+At runtime, tests will be executed against a modified version of android.jar where all final
+modifiers have been stripped off. This lets you use popular mocking libraries, like Mockito.
+"""
+
+"""
+Mocking Android dependencies
+
+By default, the Android Plug-in for Gradle executes your local unit tests against a modified version
+ of the android.jar library, which does not contain any actual code. Instead, method calls to 
+ Android classes from your unit test throw an exception.
+
+You can use a mocking framework to stub out external dependencies in your code, to easily test that
+your component interacts with a dependency in an expected way. By substituting Android dependencies
+with mock objects, you can isolate your unit test from the rest of the Android system while
+verifying that the correct methods in those dependencies are called. The Mockito mocking framework
+for Java (version 1.9.5 and higher) offers compatibility with Android unit testing. With Mockito,
+you can configure mock objects to return some specific value when invoked.
+"""
+===================================================================================================
+
+references:
+http://developer.android.com/intl/zh-cn/training/testing/unit-testing/local-unit-tests.html
+http://tools.android.com/tech-docs/unit-testing-support

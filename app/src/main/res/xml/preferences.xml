@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/inline_preference_category">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="checkbox_preference"
+            android:summary="@string/checkbox_summary"
+            android:title="@string/checkbox_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/dialog_based_preferences_category">
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:dialogTitle="@string/edit_text_preference_dialog_title"
+            android:key="@string/edit_text_preference_key"
+            android:summary="@string/edit_text_preference_summary"
+            android:title="@string/edit_text_preference_title"/>
+        <!-- the default value for ListPreference shold be some item of the entryValues array -->
+        <ListPreference
+            android:defaultValue="@string/list_preference_value_large"
+            android:dialogTitle="@string/list_preference_dialog_title"
+            android:entries="@array/list_preference_entry"
+            android:entryValues="@array/list_preference_entryValues"
+            android:key="@string/list_preference_key"
+            android:summary="@string/list_preference_summary"
+            android:title="@string/list_preference_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/launch_preferences_category">
+        <PreferenceScreen
+            android:key="screen_preference"
+            android:summary="@string/screen_preference_summary"
+            android:title="@string/screen_preference_title">
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="new_screen_checkbox_preference"
+                android:summary="@string/new_screen_checkbox_summary"
+                android:title="@string/new_screen_checkbox_title"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="intent_preference"
+            android:summary="@string/intent_preference_summary"
+            android:title="@string/intent_preference_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.qq.com"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/embedded_checkbox_category">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="parent_checkbox_preference"
+            android:summary="@string/parent_checkbox_summary"
+            android:title="@string/parent_checkbox_title"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="parent_checkbox_preference"
+            android:key="child_checkbox_preference"
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:summary="@string/child_checkbox_summary"
+            android:title="@string/child_checkbox_title"/>
+    </PreferenceCategory>
+</PreferenceScreen>

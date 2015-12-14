@@ -1,0 +1,9 @@
+"""
+Creating a test suite
+  To organize the execution of your instrumented unit tests, you can group a collection of test classes
+in a test suite class and run these tests together. Test suites can be nested; your test suite can 
+group other test suites and run all their component test classes together.
+  To create a test suite for your unit tests, import the JUnit RunWith and Suite classes.
+In your test suite, add the @RunWith(Suite.class) and the @Suite.SuitClasses() annotations.
+In the @Suite.SuiteClasses() annotation, list the individual test classes or test suites as arguments. 
+"""

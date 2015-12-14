@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="cookies.android"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SdkDemos">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".app.StyleActionBar"
+            android:label="@string/title_style_action_bar"
+            android:theme="@style/CustomActionBar">
+            <intent-filter>
+                <!-- string resource could not be used inside intent filter -->
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityLifeCycle"
+            android:label="@string/title_activity_activity_life_cycle">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.HelloFragment"
+            android:label="@string/title_hello_fragment"
+            android:parentActivityName=".app.StyleActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SdkDemos"/>
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ApkBuildProcess"
+            android:label="@string/title_apk_build_process">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.PreferencesFromXml"
+            android:label="@string/title_preferences_from_xml">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.PreferencesFromCode"
+            android:label="@string/title_preferences_from_code">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+
+        <!--
+            An empty activity used to demonstrate how to contribute some preferences
+            by specifying meta-data via the key METADATA_KEY_PREFERENCES that points to
+            a preference XML.
+        -->
+        <activity
+            android:name=".app.PreferenceFromActivityMetadata"
+            android:label="PreferenceFromActivityMetadata">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="cookies.android.intent.category.preference_contributor"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.preference"
+                android:resource="@xml/preferences_activity_metadata"/>
+        </activity>
+
+        <activity
+            android:name=".app.PreferenceWithHeaders"
+            android:label="@string/title_preference_with_headers">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".app.CustomPreferenceDemo"
+            android:label="@string/title_custom_preference">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+
+        <!-- =================================================================================== -->
+        <!-- Bind-service demo -->
+        <activity
+            android:name=".app.BindServiceDemo"
+            android:label="@string/title_bind_service_demo">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+        <!-- a local service -->
+        <service
+            android:name=".app.services.localservice.LocalService"
+            android:enabled="true"
+            android:exported="false"/>
+        <!-- a MessengerService -->
+        <service
+            android:name=".app.services.remoteservice.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":demo_messenger_service_process">
+            <intent-filter>
+                <action android:name="cookies.android.app.services.remoteservice.MessengerService_random_int"/>
+            </intent-filter>
+        </service>
+        <!-- a AIDL service -->
+        <service
+            android:name=".app.services.remoteservice.AIDLService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":demo_aidl_service_process">
+            <intent-filter>
+                <action android:name="cookies.android.app.services.remoteservice.AIDLService_random_int"/>
+            </intent-filter>
+        </service>
+        <!-- =================================================================================== -->
+        
+        <!--
+            An activity to demonstrate OpenGL ES 2.0 usage.
+        -->
+        <activity
+            android:name=".graphics.opengl.GLES20DemoActivity"
+            android:label="@string/title_gles20_demo">
+            <intent-filter>
+                <action android:name="cookies.android.intent.action.demo_tag"/>
+                <category android:name="cookies.android.intent.category.demo_tag"/>
+            </intent-filter>
+        </activity>
+
+        <!--
+            An activity used to demonstrate android unit test.
+        -->
+        <activity
+            android:name=".test.instrumentedunittest.activitytest.SimpleCalculatorActivity"
+            android:label="SimpleCaculatorForUnittest">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

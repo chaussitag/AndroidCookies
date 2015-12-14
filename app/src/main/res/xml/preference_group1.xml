@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/inline_preference_category">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="checkbox_pref_group1"
+            android:summary="@string/checkbox_summary"
+            android:title="@string/checkbox_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/dialog_based_preferences_category">
+        <EditTextPreference
+            android:defaultValue="default value"
+            android:dialogTitle="@string/edit_text_preference_dialog_title"
+            android:key="edittext_pref_group1"
+            android:summary="@string/edit_text_preference_summary"
+            android:title="@string/edit_text_preference_title"/>
+        <ListPreference
+            android:dialogTitle="@string/list_preference_dialog_title"
+            android:entries="@array/list_preference_entry"
+            android:entryValues="@array/list_preference_entryValues"
+            android:key="list_pref_group1"
+            android:summary="@string/list_preference_summary"
+            android:title="@string/list_preference_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/launch_preferences_category">
+        <PreferenceScreen
+            android:fragment="cookies.android.app.PreferenceWithHeaders$PreferenceGroup1FragmentInnerFragment"
+            android:summary="click me to show another preference fragment"
+            android:title="another preference fragment">
+            <extra
+                android:name="Arg1Key"
+                android:value="Arg1Value"/>
+            <extra
+                android:name="Arg2Key"
+                android:value="Arg2Value"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="@string/intent_preference_summary"
+            android:title="@string/intent_preference_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.ia.ac.cn"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

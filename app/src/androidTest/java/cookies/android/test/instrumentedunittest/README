@@ -1,0 +1,40 @@
+demonstrating how to make instrumented unit test.
+
+most of code in this folder is copied from:
+ https://github.com/googlesamples/android-testing/tree/master/unit/BasicUnitAndroidTest,
+
+===================================================================================================
+Instrumented tests:
+  Unit tests that run on an Android device or emulator. These tests have access to instrumentation
+information, such as the Context for the app under test. Use this approach to run unit tests that
+have Android dependencies which cannot be easily filled by using mock objects.
+===================================================================================================
+
+===================================================================================================
+"""
+You should create instrumented unit tests if your tests need access to instrumentation information
+(such as the target app's Context) or if they require the real implementation of an Android
+framework component (such as a Parcelable or SharedPreferences object). Using instrumented
+unit tests also helps to reduce the effort required to write and maintain mock code. You are still
+free to use a mocking framework, if you choose, to simulate any dependency relationships.
+Instrumented unit tests can take advantage of the Android framework APIs and supporting APIs,
+such as the Android Testing Support Library.
+"""
+
+
+"""
+Your instrumented unit test class should be written as a JUnit 4 test class,
+To create an instrumented JUnit 4 test class, add the @RunWith(AndroidJUnit4.class) annotation
+at the beginning of your test class definition. You also need to specify the AndroidJUnitRunner class
+provided in the Android Testing Support Library as your default test runner.
+"""
+
+"""
+The AndroidJUnitRunner class is a JUnit test runner that lets you run JUnit 3 or JUnit 4-style test 
+classes on Android devices, including those using the Espresso and UI Automator testing frameworks. 
+The test runner handles loading your test package and the app under test to a device, running your 
+tests, and reporting test results. This class replaces the InstrumentationTestRunner class, 
+which only supports JUnit 3 tests.
+See http://developer.android.com/intl/zh-cn/tools/testing-support-library/index.html#AndroidJUnitRunner
+"""
+===================================================================================================

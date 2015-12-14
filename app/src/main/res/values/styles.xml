@@ -1,0 +1,38 @@
+<resources>
+    <!-- Base application theme. -->
+    <style
+        name="AppTheme"
+        parent="@android:style/Theme.Holo" />
+
+    <!-- ################################################################# -->
+    <!-- holo theme with custom action bar -->
+    <style name="CustomActionBar"
+        parent="@android:style/Theme.Holo">
+        <!-- Customize your theme here. -->
+
+        <!-- Overlaying the action bar -->
+        <!--
+        <item name="android:windowActionBarOverlay">true</item>
+        -->
+        <item name="android:actionBarStyle">@style/CustomActionBarStyle</item>
+        <item name="android:actionMenuTextColor">@android:color/holo_green_dark</item>
+        <item name="android:actionBarTabTextStyle">@style/CustomActionBarTabText</item>
+    </style>
+
+    <style name="CustomActionBarStyle"
+        parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@android:color/holo_red_dark</item>
+        <item name="android:titleTextStyle">@style/CustomActionBarTitleText</item>
+    </style>
+
+    <style name="CustomActionBarTitleText"
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/holo_blue_light</item>
+    </style>
+
+    <style name="CustomActionBarTabText"
+        parent="@android:style/Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@android:color/holo_purple</item>
+    </style>
+    <!-- ################################################################# -->
+</resources>

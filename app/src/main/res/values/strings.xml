@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SdkDemos</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- menu items for the HelloFragment activity -->
+    <string name="hello_fragment_activity_item1">activity_item1</string>
+    <string name="hello_fragment_activity_item2">activity_item2</string>
+
+    <!-- menu items for the SimpleFragment fragment -->
+    <string name="simple_fragment_item1">fragment_item1</string>
+    <string name="simple_fragment_item2">fragment_item2</string>
+
+    <!-- Activity label strings, use a format similar to linux file path to category all demo activities -->
+    <string name="title_style_action_bar">App/ActionBar/StyleActionBar</string>
+    <string name="title_activity_activity_life_cycle">App/Activity/ActivityLifeCycle</string>
+    <string name="title_hello_fragment">App/Activity/HelloFragment</string>
+    <string name="title_apk_build_process">App/ApkBuildProcess</string>
+    <string name="title_preferences_from_xml">App/Preferences/PreferencesFromXml</string>
+    <string name="title_preferences_from_code">App/Preferences/PreferencesFromCode</string>
+    <string name="title_preference_with_headers">App/Preferences/PreferenceWithHeaders</string>
+    <string name="title_custom_preference">App/Preferences/CustomPreference</string>
+    <string name="title_bind_service_demo">App/Service/BindService</string>
+    <string name="title_gles20_demo">Graphics/OpenGL/GLES20Demo</string>
+
+
+    <string name="style_action_bar_desc">This activity has a custom action bar</string>
+    <string name="activity_life_cycle_desc">Demonstrating lifecycle of an activity, try rotate screen or press home button and then refers to log.</string>
+    <string name="hello_fragment_desc">This activity includes a simple fragment that was added dynamically.</string>
+
+    <!-- ######################################################################## -->
+    <!-- strings for preferences.xml -->
+    <string name="inline_preference_category">Inline Preferences</string>
+    <string name="checkbox_title">Checkbox Preference</string>
+    <string name="checkbox_summary">This is a checkbox</string>
+
+    <string name="dialog_based_preferences_category">Dialog Based Preferences</string>
+    <string name="edit_text_preference_title">EditText Preference</string>
+    <string name="edit_text_preference_summary">An example that uses an edit text dialog</string>
+    <string name="edit_text_preference_dialog_title">Enter something</string>
+    <string name="edit_text_preference_key">edit_text_preference</string>
+    <string name="list_preference_title">List Preference</string>
+    <string name="list_preference_summary">An example that uses a list dialog</string>
+    <string name="list_preference_dialog_title">Choose One</string>
+    <string name="list_preference_key">list_preference</string>
+    <string name="list_preference_value_small">small size</string>
+    <string name="list_preference_value_medium">medium size</string>
+    <string name="list_preference_value_large">large size</string>
+    <string name="list_preference_value_xlarge">super large</string>
+
+    <string name="launch_preferences_category">Launch Preferences</string>
+    <string name="screen_preference_title">Screen Preference</string>
+    <string name="screen_preference_summary">Shows another screen of preferences</string>
+    <string name="new_screen_checkbox_title">New Screen checkbox preference</string>
+    <string name="new_screen_checkbox_summary">This is a checkbox on a new screen</string>
+    <string name="intent_preference_title">Intent Preference</string>
+    <string name="intent_preference_summary">Launch an Activity from an Intent</string>
+
+    <string name="embedded_checkbox_category">Embedded Checkbox</string>
+    <string name="parent_checkbox_title">Parent Checkbox</string>
+    <string name="parent_checkbox_summary">This is visually the parent checkbox</string>
+    <string name="child_checkbox_title">Child Checkbox</string>
+    <string name="child_checkbox_summary">This is a checkbox under the parent</string>
+    <!-- ######################################################################## -->
+
+    <string name="switch_preference_title">Switch Preference</string>
+    <string name="switch_preference_summary">This is a switch</string>
+
+    <string name="custom_preference_key">custom_preference</string>
+    <string name="custom_preference_title">Custom Preference</string>
+    <string name="custom_preference_summary">This is a custom preference</string>
+
+    <!-- ######################################################################## -->
+    <!-- strings for activity_simple_caculator.xml -->
+    <string name="type_operand_one_hint">Enter Operand 1</string>
+    <string name="type_operant_two_hint">Enter Operand 2</string>
+    <string name="add_operation_text">Add</string>
+    <string name="sub_operation_text">Sub</string>
+    <string name="div_operation_text">Div</string>
+    <string name="mul_operation_text">Mul</string>
+    <string name="computationError">Error</string>
+    <!-- ######################################################################## -->
+</resources>

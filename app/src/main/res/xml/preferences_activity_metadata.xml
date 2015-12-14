@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="preferences from activity metadata">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_pref_metadata"
+            android:summary="Switch preference from a xml specified in an activity's metadata in the manifest"
+            android:title="a switch"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="checkbox_pref_metadata"
+            android:summary="Checkbox preference from a xml specified in an activity's metadata in the manifest"
+            android:title="a checkbox"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

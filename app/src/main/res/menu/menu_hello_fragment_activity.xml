@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cookies.android.app.HelloFragment">
+    <item
+        android:id="@+id/hello_frag_activity_item1"
+        android:title="@string/hello_fragment_activity_item1"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/hello_frag_activity_item2"
+        android:title="@string/hello_fragment_activity_item2"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <cookies.android.app.CustomPreference
+        android:key="@string/custom_preference_key"
+        android:title="@string/custom_preference_title"
+        android:summary="@string/custom_preference_summary"
+        android:layout_gravity="center_vertical"
+        android:defaultValue="2"/>
+</PreferenceScreen>

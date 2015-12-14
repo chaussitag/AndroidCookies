@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="cookies.android.app.PreferenceWithHeaders$PreferenceGroup1Fragment"
+        android:icon="@drawable/ic_action_emo_basic"
+        android:summary="click me to switch to preference group 1"
+        android:title="pref group 1"/>
+
+    <header
+        android:fragment="cookies.android.app.PreferenceWithHeaders$PreferenceGroup2Fragment"
+        android:icon="@drawable/ic_action_star_0"
+        android:summary="click met to switch to preference group 2"
+        android:title="pref group 2">
+        <!-- key/value pairs can be included with a header as arguments to its fragment. -->
+        <extra
+            android:name="key1"
+            android:value="value1"/>
+        <extra
+            android:name="key2"
+            android:value="value2"/>
+    </header>
+
+    <header
+        android:icon="@drawable/ic_action_globe"
+        android:summary="click me to start an activity match the specified intent"
+        android:title="Intent">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://www.hust.edu.cn"/>
+    </header>
+</preference-headers>
